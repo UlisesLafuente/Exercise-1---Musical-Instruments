@@ -1,5 +1,9 @@
 public class StringInstrument extends Instrument {
 
+    StringInstrument(String name, int price){
+        super.name=name;
+        super.price=price;
+    }
     @Override
     public void play(){
         System.out.println("Està sonant un instrument de corda.");

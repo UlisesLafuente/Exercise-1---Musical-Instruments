@@ -1,7 +1,12 @@
 public class WindInstrument extends Instrument {
 
-        @Override
-        public void play(){
-            System.out.println("Està sonant un instrument de vent.");
-        }
+    WindInstrument(String name, int price){
+        super.name=name;
+        super.price=price;
+    }
+
+    @Override
+    public void play(){
+        System.out.println("Està sonant un instrument de vent.");
+    }
 }

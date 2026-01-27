@@ -1,6 +1,6 @@
 public abstract class Instrument {
-    private String name;
-    private int price;
+    public String name;
+    public int price;
 
     public void play(){}
 }
