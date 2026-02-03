@@ -34,15 +34,23 @@ Add a class Main with a method main() where:
         An object of each type of instrument is created
         Call the method play()of each to see the polymorphic behavior
 
+---
 
-Loading of classes and static blocks
 The loading process of a class in Java occurs only once during the execution of the program.
+
 It shows that this charge can be caused in two ways:
 
     When the first instance of the class is created.
     When accessing a static member of the class (such as a method or attribute static).
 
 To check, add a static block into the class and watch when running.
+
+In addition, research and document by yourself :
+
+    What is an initialization block (without static)?
+    When is it executed?
+    What is the difference between this and a block static?
+
 
 
 

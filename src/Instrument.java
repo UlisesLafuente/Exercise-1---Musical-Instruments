@@ -4,8 +4,10 @@ public abstract class Instrument {
 
     public Instrument(String name, int price) throws Exception {
         this.name= validatePropieties(name).toString();
-        this.price= (int) validatePropieties(name);
+        this.price= (int) validatePropieties(price);
     }
+    static{System.out.println("El bloque estático está funcionando");}
+
     public abstract void play();
 
     private Object validatePropieties(Object o) throws Exception {
