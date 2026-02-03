@@ -1,0 +1,31 @@
+Instruments
+
+Clase Instrument: el método play() no cumple el enunciado (debe ser abstracto)
+
+En el enunciado se pide explícitamente un método abstracto play() en la clase abstracta Instrument, pero en tu código aparece como public void play(){} (método vacío). Esto hace que no estés obligando a las subclases a implementar el comportamiento, y además rompe la intención del ejercicio (polimorfismo basado en un contrato abstracto). La mejora aquí es declarar play() como abstracto para que cualquier instrumento esté obligado a definir cómo “suena”.
+
+Clase Instrument: encapsulación y validación del dominio
+
+En la clase Instrument, los atributos name y price son públicos y no tienen ningún tipo de validación. Esto permite que cualquier clase pueda modificarlos libremente y que el objeto pueda quedar en un estado inválido, por ejemplo con un precio negativo.
+
+Este diseño rompe la encapsulación y va en contra de las buenas prácticas básicas de Java.
+
+Lo más adecuado es que estos atributos tengan un nivel de acceso restringido y que su inicialización y validación se centralicen en un único punto (por ejemplo, en el constructor).
+
+De esta forma puedes garantizar que un instrumento siempre tenga datos coherentes y empiezas a aplicar una mentalidad de dominio, incluso en ejercicios sencillos. Esto mejora la seguridad, la mantenibilidad y la calidad general del código.
+
+Clase Instrument: falta un constructor común para evitar duplicación (SRP y reutilización)
+
+En WindInstrument, StringInstrument y PercussionInstrument repites la misma lógica para asignar name y price usando super.name = .... Esa duplicación indica que la responsabilidad de inicializar campos comunes debería estar en Instrument.
+
+Deberías centralizar la inicialización en un constructor de Instrument, y que las subclases lo invoquen con super(...). Esto reduce repetición, mejora el diseño y evita errores futuros cuando cambie la lógica de validación o inicialización.
+
+Visibilidad del los constructor
+
+Tus constructores no tienen modificador de acceso lo que los deja con visibilidad package-private. Eso puede ser un problema si en el futuro organizas el proyecto en paquetes distintos (muy habitual) y quieres instanciar desde otro paquete. Como buena práctica deberías definirlos como public o justificar el nivel de acceso.
+
+Bloques static: requisito del enunciado no implementado
+
+En el enunciado se pide añadir un bloque static para observar cuándo se carga la clase. En tus clases no hay ningún bloque estático, por lo que falta una parte importante del ejercicio.
+
+Aquí lo que se busca es que demuestres que la carga ocurre una vez y se dispara al crear instancias o al acceder a miembros estáticos.
