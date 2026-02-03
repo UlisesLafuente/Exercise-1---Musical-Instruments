@@ -1,6 +1,6 @@
 Instruments
 
-Clase Instrument: el método play() no cumple el enunciado (debe ser abstracto)
+Clase Instrument: el método play() no cumple el enunciado (debe ser abstracto) ✅
 
 En el enunciado se pide explícitamente un método abstracto play() en la clase abstracta Instrument, pero en tu código aparece como public void play(){} (método vacío). Esto hace que no estés obligando a las subclases a implementar el comportamiento, y además rompe la intención del ejercicio (polimorfismo basado en un contrato abstracto). La mejora aquí es declarar play() como abstracto para que cualquier instrumento esté obligado a definir cómo “suena”.
 

@@ -1,8 +1,7 @@
 public class WindInstrument extends Instrument {
 
     WindInstrument(String name, int price){
-        super.name=name;
-        super.price=price;
+        super(name, price);
     }
 
     @Override

@@ -1,8 +1,7 @@
 public class PercussionInstrument extends Instrument{
 
     PercussionInstrument(String name, int price){
-        super.name=name;
-        super.price=price;
+        super(name, price);
     }
     @Override
     public void play(){
