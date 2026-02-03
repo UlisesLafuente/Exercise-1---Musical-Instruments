@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
-void main() {
-    IO.println(String.format("Hello and welcome!"));
+void main() throws Exception {
+    IO.println("Hello and welcome!");
 
     Instrument flute = new WindInstrument("Flute", 20);
     Instrument guitar = new StringInstrument("Guitar", 100);

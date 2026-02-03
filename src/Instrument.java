@@ -1,8 +1,8 @@
 public abstract class Instrument {
-    private String name;
-    private int price;
+    private final String name;
+    private final int price;
 
-    Instrument(String name, int price) throws Exception {
+    public Instrument(String name, int price) throws Exception {
         this.name= validatePropieties(name).toString();
         this.price= (int) validatePropieties(name);
     }

@@ -1,6 +1,6 @@
 public class PercussionInstrument extends Instrument{
 
-    PercussionInstrument(String name, int price){
+    public PercussionInstrument(String name, int price) throws Exception {
         super(name, price);
     }
     @Override

@@ -1,6 +1,6 @@
 public class WindInstrument extends Instrument {
 
-    WindInstrument(String name, int price){
+    public WindInstrument(String name, int price) throws Exception {
         super(name, price);
     }
 

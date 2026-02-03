@@ -1,6 +1,6 @@
 public class StringInstrument extends Instrument {
 
-    StringInstrument(String name, int price){
+    public StringInstrument(String name, int price) throws Exception {
         super(name, price);
     }
     @Override
